@@ -1,0 +1,266 @@
+---
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../lib/shadcn-imports";
+import { Badge } from "../lib/shadcn-imports";
+import {
+  FileText,
+  Scale,
+  CheckCircle,
+  Mail,
+  MessageSquare,
+} from "../lib/shadcn-imports";
+---
+
+<section
+  class="py-32 px-8 md:px-16 bg-main text-primary relative overflow-hidden"
+>
+  <!-- Subtle decorative line -->
+  <div
+    class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-gold/10 to-transparent"
+  >
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <!-- Documental Section -->
+    <div class="mb-40">
+      <div class="flex items-start gap-12 mb-20">
+        <div class="hidden lg:block mt-4">
+          <FileText className="w-12 h-12 text-gold opacity-40" client:load />
+        </div>
+        <div class="flex-1 space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="jp-dot"></div>
+            <Badge
+              variant="secondary"
+              className="bg-gold/10 text-gold border-0 font-light tracking-wider"
+            >
+              Documentación
+            </Badge>
+          </div>
+          <h2
+            class="text-5xl md:text-6xl font-extralight text-primary jp-title"
+          >
+            Apartado Documental
+          </h2>
+          <div class="w-32 h-px bg-gold/40"></div>
+          <p class="text-lg text-muted/80 font-light leading-loose max-w-2xl">
+            La IA analiza las necesidades del cliente y genera documentación
+            técnica completa de forma automática
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="jp-card p-8 space-y-5 group">
+          <div class="flex items-start justify-between">
+            <CheckCircle
+              className="w-6 h-6 text-jade opacity-70 group-hover:opacity-100 transition-opacity"
+              client:load
+            />
+            <span class="text-xs text-muted/50 font-light tracking-widest"
+              >01</span
+            >
+          </div>
+          <h3 class="text-xl font-light text-primary">
+            Requisitos del sistema
+          </h3>
+          <div class="w-12 h-px bg-jade/30"></div>
+          <p class="text-sm text-muted/80 font-light leading-relaxed">
+            Funcionales y no funcionales, categorizados y priorizados para
+            máxima claridad
+          </p>
+        </div>
+
+        <div class="jp-card p-8 space-y-5 group">
+          <div class="flex items-start justify-between">
+            <CheckCircle
+              className="w-6 h-6 text-jade opacity-70 group-hover:opacity-100 transition-opacity"
+              client:load
+            />
+            <span class="text-xs text-muted/50 font-light tracking-widest"
+              >02</span
+            >
+          </div>
+          <h3 class="text-xl font-light text-primary">Diagramas UML</h3>
+          <div class="w-12 h-px bg-jade/30"></div>
+          <p class="text-sm text-muted/80 font-light leading-relaxed">
+            Casos de uso, diagramas de secuencia y entidad-relación generados
+            automáticamente
+          </p>
+        </div>
+
+        <div class="jp-card p-8 space-y-5 group">
+          <div class="flex items-start justify-between">
+            <CheckCircle
+              className="w-6 h-6 text-jade opacity-70 group-hover:opacity-100 transition-opacity"
+              client:load
+            />
+            <span class="text-xs text-muted/50 font-light tracking-widest"
+              >03</span
+            >
+          </div>
+          <h3 class="text-xl font-light text-primary">Diccionario de datos</h3>
+          <div class="w-12 h-px bg-jade/30"></div>
+          <p class="text-sm text-muted/80 font-light leading-relaxed">
+            Estructura completa con tipos, restricciones y descripciones
+            detalladas
+          </p>
+        </div>
+
+        <div class="jp-card p-8 space-y-5 group">
+          <div class="flex items-start justify-between">
+            <CheckCircle
+              className="w-6 h-6 text-jade opacity-70 group-hover:opacity-100 transition-opacity"
+              client:load
+            />
+            <span class="text-xs text-muted/50 font-light tracking-widest"
+              >04</span
+            >
+          </div>
+          <h3 class="text-xl font-light text-primary">
+            Objetivos del proyecto
+          </h3>
+          <div class="w-12 h-px bg-jade/30"></div>
+          <p class="text-sm text-muted/80 font-light leading-relaxed">
+            Objetivo general y específicos alineados con las necesidades del
+            negocio
+          </p>
+        </div>
+
+        <div class="jp-card p-8 space-y-5 group">
+          <div class="flex items-start justify-between">
+            <CheckCircle
+              className="w-6 h-6 text-jade opacity-70 group-hover:opacity-100 transition-opacity"
+              client:load
+            />
+            <span class="text-xs text-muted/50 font-light tracking-widest"
+              >05</span
+            >
+          </div>
+          <h3 class="text-xl font-light text-primary">Alcance definido</h3>
+          <div class="w-12 h-px bg-jade/30"></div>
+          <p class="text-sm text-muted/80 font-light leading-relaxed">
+            Límites claros, entregables y exclusiones para evitar scope creep
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal Section -->
+    <div>
+      <div class="flex items-start gap-12 mb-20">
+        <div class="hidden lg:block mt-4">
+          <Scale className="w-12 h-12 text-jade opacity-40" client:load />
+        </div>
+        <div class="flex-1 space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="jp-dot"></div>
+            <Badge
+              variant="secondary"
+              className="bg-jade/10 text-jade border-0 font-light tracking-wider"
+            >
+              Legal
+            </Badge>
+          </div>
+          <h2
+            class="text-5xl md:text-6xl font-extralight text-primary jp-title"
+          >
+            Apartado Legal
+          </h2>
+          <div class="w-32 h-px bg-jade/40"></div>
+          <p class="text-lg text-muted/80 font-light leading-loose max-w-2xl">
+            Sistema completo de contratos con validación según legislación
+            colombiana
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="jp-card p-10 space-y-8">
+          <h3 class="text-2xl font-light text-primary">
+            Plantillas parametrizables
+          </h3>
+          <div class="w-16 h-px bg-jade/30"></div>
+          <div class="space-y-5">
+            <div class="flex items-start gap-3">
+              <div class="w-1 h-1 rounded-full bg-jade mt-2"></div>
+              <p
+                class="text-sm text-muted/80 font-light leading-relaxed flex-1"
+              >
+                Nombre del proyecto y valor del contrato
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-1 h-1 rounded-full bg-jade mt-2"></div>
+              <p
+                class="text-sm text-muted/80 font-light leading-relaxed flex-1"
+              >
+                Cláusulas seleccionables mediante checkboxes
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-1 h-1 rounded-full bg-jade mt-2"></div>
+              <p
+                class="text-sm text-muted/80 font-light leading-relaxed flex-1"
+              >
+                Adición de cláusulas personalizadas
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="jp-card p-10 space-y-8">
+          <h3 class="text-2xl font-light text-primary">Revisión con IA</h3>
+          <div class="w-16 h-px bg-jade/30"></div>
+          <div class="space-y-5">
+            <div class="flex items-start gap-3">
+              <div class="w-1 h-1 rounded-full bg-jade mt-2"></div>
+              <p
+                class="text-sm text-muted/80 font-light leading-relaxed flex-1"
+              >
+                Validación automática según leyes colombianas
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-1 h-1 rounded-full bg-jade mt-2"></div>
+              <p
+                class="text-sm text-muted/80 font-light leading-relaxed flex-1"
+              >
+                Advertencias sobre cláusulas riesgosas
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-1 h-1 rounded-full bg-jade mt-2"></div>
+              <p
+                class="text-sm text-muted/80 font-light leading-relaxed flex-1"
+              >
+                Recomendaciones antes del envío
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="jp-card p-10 space-y-8">
+          <div class="flex gap-3 mb-2">
+            <Mail className="w-6 h-6 text-jade opacity-70" client:load />
+            <MessageSquare
+              className="w-6 h-6 text-jade opacity-70"
+              client:load
+            />
+          </div>
+          <h3 class="text-2xl font-light text-primary">Envío integrado</h3>
+          <div class="w-16 h-px bg-jade/30"></div>
+          <p class="text-sm text-muted/80 font-light leading-relaxed">
+            Email y WhatsApp integrados para enviar contratos con mensajes
+            personalizados directamente desde la plataforma
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

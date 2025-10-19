@@ -1,0 +1,183 @@
+---
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../lib/shadcn-imports";
+import { Badge } from "../lib/shadcn-imports";
+import { DollarSign, Users, Activity, TrendingUp } from "../lib/shadcn-imports";
+---
+
+<section class="py-32 px-8 md:px-16 bg-primary-black text-primary">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section header -->
+    <div class="mb-24 space-y-6">
+      <div class="flex items-center gap-4">
+        <div class="jp-dot"></div>
+        <Badge
+          variant="secondary"
+          className="bg-blue-gray/10 text-blue-gray border-0 font-light tracking-wider"
+        >
+          Analytics
+        </Badge>
+      </div>
+      <h2
+        class="text-5xl md:text-6xl font-extralight text-primary jp-title max-w-3xl"
+      >
+        Métricas del negocio
+      </h2>
+      <div class="w-32 h-px bg-blue-gray/40"></div>
+      <p class="text-lg text-muted/80 font-light leading-loose max-w-2xl">
+        Panel de control completo con estadísticas en tiempo real cuando escale
+        la plataforma
+      </p>
+    </div>
+
+    <!-- Statistics grid with asymmetric layout -->
+    <div class="grid lg:grid-cols-2 gap-16 mb-20">
+      <!-- Ingresos card - large -->
+      <div class="jp-card p-12 space-y-10 lg:col-span-1">
+        <div class="flex items-start justify-between">
+          <div class="space-y-4">
+            <DollarSign
+              className="w-10 h-10 text-gold opacity-70"
+              client:load
+            />
+            <h3 class="text-3xl font-light text-gold jp-subtitle">Ingresos</h3>
+            <div class="w-20 h-px bg-gold/30"></div>
+          </div>
+          <span class="text-xs text-muted/50 font-light tracking-widest"
+            >INCOME</span
+          >
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <div class="w-1 h-1 rounded-full bg-gold"></div>
+              <span class="text-sm text-muted/80 font-light"
+                >Total acumulado</span
+              >
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <div class="w-1 h-1 rounded-full bg-gold"></div>
+              <span class="text-sm text-muted/80 font-light">Por período</span>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <div class="w-1 h-1 rounded-full bg-gold"></div>
+              <span class="text-sm text-muted/80 font-light">Por proyecto</span>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <div class="w-1 h-1 rounded-full bg-gold"></div>
+              <span class="text-sm text-muted/80 font-light">Proyecciones</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clientes & Proyectos - stacked -->
+      <div class="space-y-8">
+        <div class="jp-card p-10 space-y-8">
+          <div class="flex items-start justify-between">
+            <div class="space-y-4">
+              <Users className="w-9 h-9 text-jade opacity-70" client:load />
+              <h3 class="text-2xl font-light text-jade jp-subtitle">
+                Clientes
+              </h3>
+              <div class="w-16 h-px bg-jade/30"></div>
+            </div>
+            <span class="text-xs text-muted/50 font-light tracking-widest"
+              >CLIENTS</span
+            >
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <div class="w-1 h-1 rounded-full bg-jade"></div>
+              <span class="text-sm text-muted/80 font-light"
+                >Total y activos</span
+              >
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-1 h-1 rounded-full bg-jade"></div>
+              <span class="text-sm text-muted/80 font-light"
+                >Valor promedio</span
+              >
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-1 h-1 rounded-full bg-jade"></div>
+              <span class="text-sm text-muted/80 font-light"
+                >Historial completo</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="jp-card p-10 space-y-8">
+          <div class="flex items-start justify-between">
+            <div class="space-y-4">
+              <Activity
+                className="w-9 h-9 text-blue-gray opacity-70"
+                client:load
+              />
+              <h3 class="text-2xl font-light text-blue-gray jp-subtitle">
+                Proyectos
+              </h3>
+              <div class="w-16 h-px bg-blue-gray/30"></div>
+            </div>
+            <span class="text-xs text-muted/50 font-light tracking-widest"
+              >PROJECTS</span
+            >
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <div class="w-1 h-1 rounded-full bg-blue-gray"></div>
+              <span class="text-sm text-muted/80 font-light"
+                >Completados y en curso</span
+              >
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-1 h-1 rounded-full bg-blue-gray"></div>
+              <span class="text-sm text-muted/80 font-light">Tasa de éxito</span
+              >
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-1 h-1 rounded-full bg-blue-gray"></div>
+              <span class="text-sm text-muted/80 font-light"
+                >Tiempo promedio</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard feature -->
+    <div class="jp-card p-12 max-w-4xl mx-auto">
+      <div class="flex items-start gap-8">
+        <TrendingUp
+          className="w-12 h-12 text-gold opacity-60 hidden md:block"
+          client:load
+        />
+        <div class="flex-1 space-y-6">
+          <h3 class="text-3xl font-light text-primary">
+            Dashboard interactivo
+          </h3>
+          <div class="w-24 h-px bg-gold/30"></div>
+          <p class="text-base text-muted/80 font-light leading-loose">
+            Visualiza todas las métricas en tiempo real con gráficos
+            interactivos, filtros avanzados y reportes personalizables. Toma
+            decisiones informadas basadas en datos precisos de tu negocio
+            freelance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

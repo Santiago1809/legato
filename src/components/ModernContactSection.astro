@@ -1,0 +1,147 @@
+---
+import { Button } from "../lib/shadcn-imports";
+import { Badge } from "../lib/shadcn-imports";
+import { Mail, MessageSquare, Download } from "../lib/shadcn-imports";
+---
+
+<section
+  class="py-32 px-8 md:px-16 bg-primary-black text-primary relative overflow-hidden"
+>
+  <!-- Decorative elements -->
+  <div
+    class="absolute top-1/3 left-10 w-px h-64 bg-gradient-to-b from-transparent via-jade/10 to-transparent"
+  >
+  </div>
+  <div
+    class="absolute bottom-1/4 right-20 w-px h-48 bg-gradient-to-b from-transparent via-gold/10 to-transparent"
+  >
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <!-- Header -->
+    <div class="mb-24 text-center space-y-6">
+      <div class="flex items-center justify-center gap-4">
+        <div class="jp-dot"></div>
+        <Badge
+          variant="secondary"
+          className="bg-jade/10 text-jade border-0 font-light tracking-wider"
+        >
+          Contacto
+        </Badge>
+      </div>
+      <h2
+        class="text-5xl md:text-7xl font-extralight text-primary jp-title max-w-4xl mx-auto leading-tight"
+      >
+        Comienza hoy
+      </h2>
+      <div class="w-32 h-px bg-jade/40 mx-auto"></div>
+      <p
+        class="text-lg text-muted/80 font-light leading-loose max-w-2xl mx-auto"
+      >
+        Únete a desarrolladores freelance colombianos que gestionan proyectos de
+        manera profesional con Legato
+      </p>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-wrap gap-6 justify-center mb-20">
+      <Button
+        size="lg"
+        className="bg-jade hover:bg-jade/90 text-black font-medium px-10 py-6"
+        client:load
+      >
+        <Mail className="w-5 h-5 mr-3" />
+        Email
+      </Button>
+      <Button
+        size="lg"
+        variant="outline"
+        className="border-gold text-gold hover:bg-gold hover:text-black font-medium px-10 py-6 transition-all"
+        client:load
+      >
+        <MessageSquare className="w-5 h-5 mr-3" />
+        Demo
+      </Button>
+      <Button
+        size="lg"
+        variant="outline"
+        className="border-blue-gray text-blue-gray hover:bg-blue-gray hover:text-black font-medium px-10 py-6 transition-all"
+        client:load
+      >
+        <Download className="w-5 h-5 mr-3" />
+        Brochure
+      </Button>
+    </div>
+
+    <!-- Contact grid -->
+    <div class="grid md:grid-cols-3 gap-12 mb-24 max-w-4xl mx-auto">
+      <div class="text-center space-y-4 group">
+        <Mail
+          className="w-8 h-8 text-jade opacity-70 mx-auto group-hover:opacity-100 transition-opacity"
+          client:load
+        />
+        <div class="w-12 h-px bg-jade/30 mx-auto"></div>
+        <div class="space-y-2">
+          <h3 class="text-sm font-light text-primary tracking-wider">EMAIL</h3>
+          <p class="text-sm text-muted/80 font-light">contacto@legato.dev</p>
+        </div>
+      </div>
+
+      <div class="text-center space-y-4 group">
+        <MessageSquare
+          className="w-8 h-8 text-gold opacity-70 mx-auto group-hover:opacity-100 transition-opacity"
+          client:load
+        />
+        <div class="w-12 h-px bg-gold/30 mx-auto"></div>
+        <div class="space-y-2">
+          <h3 class="text-sm font-light text-primary tracking-wider">
+            WHATSAPP
+          </h3>
+          <p class="text-sm text-muted/80 font-light">+57 300 123 4567</p>
+        </div>
+      </div>
+
+      <div class="text-center space-y-4 group">
+        <Download
+          className="w-8 h-8 text-blue-gray opacity-70 mx-auto group-hover:opacity-100 transition-opacity"
+          client:load
+        />
+        <div class="w-12 h-px bg-blue-gray/30 mx-auto"></div>
+        <div class="space-y-2">
+          <h3 class="text-sm font-light text-primary tracking-wider">DOCS</h3>
+          <p class="text-sm text-muted/80 font-light">docs.legato.dev</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Early access form -->
+    <div class="jp-card p-12 max-w-3xl mx-auto">
+      <div class="text-center space-y-8">
+        <div class="space-y-4">
+          <h3 class="text-3xl font-light text-primary jp-subtitle">
+            Early Access
+          </h3>
+          <div class="w-16 h-px bg-jade/30 mx-auto"></div>
+          <p
+            class="text-base text-muted/80 font-light leading-loose max-w-xl mx-auto"
+          >
+            Acceso anticipado con 3 meses gratis del plan Profesional
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+          <input
+            type="email"
+            placeholder="tu@email.com"
+            class="flex-1 px-6 py-4 bg-main/50 border border-jade/20 rounded text-primary placeholder-muted/50 font-light focus:outline-none focus:border-jade/60 transition-colors"
+          />
+          <Button
+            className="bg-jade hover:bg-jade/90 text-black font-medium px-8 py-4"
+            client:load
+          >
+            Unirme
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

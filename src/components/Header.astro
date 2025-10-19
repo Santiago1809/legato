@@ -1,0 +1,186 @@
+---
+import { Button } from "../lib/shadcn-imports";
+import "@/styles/header.css";
+---
+
+<header
+  class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b transition-all duration-500"
+  id="header"
+  style="background-color: rgba(15, 17, 21, 0.8); border-color: rgba(212, 175, 55, 0.1);"
+>
+  <div class="container mx-auto px-8 md:px-16">
+    <nav class="flex items-center justify-between h-20 md:h-24">
+      <!-- Logo minimalista -->
+      <a href="#home" class="group flex items-center gap-4">
+        <div class="relative">
+          <div
+            class="jp-dot opacity-70 group-hover:opacity-100 transition-opacity"
+          >
+          </div>
+          <div
+            class="absolute -right-8 top-1/2 w-6 h-px bg-gold/30 group-hover:bg-gold/60 transition-all"
+          >
+          </div>
+        </div>
+        <span
+          class="text-2xl md:text-3xl font-extralight text-primary jp-title tracking-wider group-hover:text-gold transition-colors"
+        >
+          Legato
+        </span>
+      </a>
+
+      <!-- Navigation Links - Desktop -->
+      <div class="hidden lg:flex items-center gap-12">
+        <a href="#features" class="nav-link">
+          <span class="text-sm tracking-widest font-medium"
+            >Características</span
+          >
+          <div class="nav-underline"></div>
+        </a>
+        <a href="#pricing" class="nav-link">
+          <span class="text-sm tracking-widest font-medium">Precios</span>
+          <div class="nav-underline"></div>
+        </a>
+        <a href="#testimonials" class="nav-link">
+          <span class="text-sm tracking-widest font-medium">Testimonios</span>
+          <div class="nav-underline"></div>
+        </a>
+        <a href="#faq" class="nav-link">
+          <span class="text-sm tracking-widest font-medium">FAQ</span>
+          <div class="nav-underline"></div>
+        </a>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-4">
+        <Button
+          className="bg-jade hover:bg-jade/90 text-black font-medium px-8 py-5 text-sm tracking-wider hidden md:flex"
+          client:load
+        >
+          Comenzar
+        </Button>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-toggle"
+          class="lg:hidden flex flex-col gap-1.5 w-10 h-10 items-center justify-center group"
+          aria-label="Toggle menu"
+        >
+          <span class="w-6 h-px bg-gold transition-all group-hover:w-7"></span>
+          <span class="w-6 h-px bg-gold transition-all"></span>
+          <span class="w-4 h-px bg-gold transition-all group-hover:w-7"></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden hidden border-t"
+    style="border-color: rgba(212, 175, 55, 0.1);"
+  >
+    <div class="container mx-auto px-8 py-8 space-y-6">
+      <a href="#features" class="mobile-nav-link">
+        <span class="text-base tracking-wider font-medium">Características</span
+        >
+        <div class="w-8 h-px bg-jade/30"></div>
+      </a>
+      <a href="#pricing" class="mobile-nav-link">
+        <span class="text-base tracking-wider font-medium">Precios</span>
+        <div class="w-8 h-px bg-gold/30"></div>
+      </a>
+      <a href="#testimonials" class="mobile-nav-link">
+        <span class="text-base tracking-wider font-medium">Testimonios</span>
+        <div class="w-8 h-px bg-blue-gray/30"></div>
+      </a>
+      <a href="#faq" class="mobile-nav-link">
+        <span class="text-base tracking-wider font-medium">FAQ</span>
+        <div class="w-8 h-px bg-jade/30"></div>
+      </a>
+      <div class="pt-4">
+        <Button
+          className="w-full bg-jade hover:bg-jade/90 text-black font-medium py-5 text-base tracking-wider"
+          client:load
+        >
+          Comenzar
+        </Button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("hidden");
+  });
+
+  // Close mobile menu when clicking a link
+  const mobileLinks = mobileMenu?.querySelectorAll("a");
+  mobileLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
+    });
+  });
+
+  // Smooth scroll for all anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e: Event) {
+      e.preventDefault();
+      const href = (e.currentTarget as HTMLAnchorElement).getAttribute("href");
+      const target = document.querySelector(href || "");
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+
+  // Header scroll effect
+  const header = document.getElementById("header");
+  let lastScroll = 0;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 100) {
+      header?.classList.add("header-scrolled");
+    } else {
+      header?.classList.remove("header-scrolled");
+    }
+
+    lastScroll = currentScroll;
+  });
+
+  // Active section highlighting
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const htmlSection = section as HTMLElement;
+      const sectionTop = htmlSection.offsetTop;
+      const sectionHeight = htmlSection.clientHeight;
+      if (window.pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute("id") || "";
+      }
+    });
+
+    navLinks.forEach((link) => {
+      const htmlLink = link as HTMLElement;
+      const href = link.getAttribute("href")?.substring(1);
+      if (href === current) {
+        htmlLink.style.color = "#D4AF37";
+      } else {
+        htmlLink.style.color = "rgba(232, 232, 232, 0.8)";
+      }
+    });
+  });
+</script>

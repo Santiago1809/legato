@@ -1,0 +1,176 @@
+---
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../lib/shadcn-imports";
+import { Badge } from "../lib/shadcn-imports";
+import { Star } from "../lib/shadcn-imports";
+---
+
+<section class="py-32 px-8 md:px-16 bg-primary-black text-primary">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section header -->
+    <div class="mb-24 space-y-6">
+      <div class="flex items-center gap-4">
+        <div class="jp-dot"></div>
+        <span class="text-xs text-muted font-light tracking-widest uppercase"
+          >Testimonios</span
+        >
+      </div>
+      <h2
+        class="text-5xl md:text-6xl font-extralight text-primary jp-title max-w-3xl"
+      >
+        Experiencias reales
+      </h2>
+      <div class="w-32 h-px bg-gold/40"></div>
+    </div>
+
+    <!-- Testimonials grid with asymmetric spacing -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+      <div class="space-y-8 group">
+        <div class="flex gap-1">
+          {
+            Array.from({ length: 5 }).map((_, i) => (
+              <Star
+                className="w-3 h-3 fill-gold/70 text-gold/70 opacity-60 group-hover:opacity-100 transition-opacity"
+                client:load
+              />
+            ))
+          }
+        </div>
+        <p class="text-sm text-muted/80 font-light leading-loose">
+          "Legato ha transformado mi flujo de trabajo. Documentación automática
+          y contratos impecables con revisión legal por IA."
+        </p>
+        <div class="space-y-2">
+          <div class="font-light text-primary text-base">Carlos Mendoza</div>
+          <div class="text-xs text-muted/60 tracking-wider">
+            Full-Stack · Bogotá
+          </div>
+        </div>
+        <div class="w-12 h-px bg-gold/20"></div>
+      </div>
+
+      <div class="space-y-8 group md:mt-12">
+        <div class="flex gap-1">
+          {
+            Array.from({ length: 5 }).map((_, i) => (
+              <Star
+                className="w-3 h-3 fill-jade/70 text-jade/70 opacity-60 group-hover:opacity-100 transition-opacity"
+                client:load
+              />
+            ))
+          }
+        </div>
+        <p class="text-sm text-muted/80 font-light leading-loose">
+          "Contratos profesionales adaptados a legislación colombiana. El envío
+          automático por WhatsApp es perfecto."
+        </p>
+        <div class="space-y-2">
+          <div class="font-light text-primary text-base">Ana López</div>
+          <div class="text-xs text-muted/60 tracking-wider">
+            Backend · Medellín
+          </div>
+        </div>
+        <div class="w-12 h-px bg-jade/20"></div>
+      </div>
+
+      <div class="space-y-8 group">
+        <div class="flex gap-1">
+          {
+            Array.from({ length: 5 }).map((_, i) => (
+              <Star
+                className="w-3 h-3 fill-blue-gray/70 text-blue-gray/70 opacity-60 group-hover:opacity-100 transition-opacity"
+                client:load
+              />
+            ))
+          }
+        </div>
+        <p class="text-sm text-muted/80 font-light leading-loose">
+          "Dashboard con estadísticas claras que me ayudan a optimizar tarifas y
+          tomar decisiones informadas sobre mi negocio."
+        </p>
+        <div class="space-y-2">
+          <div class="font-light text-primary text-base">Juan Pérez</div>
+          <div class="text-xs text-muted/60 tracking-wider">Mobile · Cali</div>
+        </div>
+        <div class="w-12 h-px bg-blue-gray/20"></div>
+      </div>
+
+      <div class="space-y-8 group">
+        <div class="flex gap-1">
+          {
+            Array.from({ length: 5 }).map((_, i) => (
+              <Star
+                className="w-3 h-3 fill-gold/70 text-gold/70 opacity-60 group-hover:opacity-100 transition-opacity"
+                client:load
+              />
+            ))
+          }
+        </div>
+        <p class="text-sm text-muted/80 font-light leading-loose">
+          "Todo automatizado y profesional. Odio los papeleos y Legato los
+          elimina por completo. Clientes impresionados."
+        </p>
+        <div class="space-y-2">
+          <div class="font-light text-primary text-base">María García</div>
+          <div class="text-xs text-muted/60 tracking-wider">
+            Frontend · Barranquilla
+          </div>
+        </div>
+        <div class="w-12 h-px bg-gold/20"></div>
+      </div>
+
+      <div class="space-y-8 group md:mt-12">
+        <div class="flex gap-1">
+          {
+            Array.from({ length: 5 }).map((_, i) => (
+              <Star
+                className="w-3 h-3 fill-jade/70 text-jade/70 opacity-60 group-hover:opacity-100 transition-opacity"
+                client:load
+              />
+            ))
+          }
+        </div>
+        <p class="text-sm text-muted/80 font-light leading-loose">
+          "IA para documentación espectacular. Diagramas y requisitos en
+          minutos. Antes tardaba días en documentación técnica."
+        </p>
+        <div class="space-y-2">
+          <div class="font-light text-primary text-base">Diego Ruiz</div>
+          <div class="text-xs text-muted/60 tracking-wider">
+            Architect · Bucaramanga
+          </div>
+        </div>
+        <div class="w-12 h-px bg-jade/20"></div>
+      </div>
+
+      <div class="space-y-8 group">
+        <div class="flex gap-1">
+          {
+            Array.from({ length: 5 }).map((_, i) => (
+              <Star
+                className="w-3 h-3 fill-blue-gray/70 text-blue-gray/70 opacity-60 group-hover:opacity-100 transition-opacity"
+                client:load
+              />
+            ))
+          }
+        </div>
+        <p class="text-sm text-muted/80 font-light leading-loose">
+          "Escalé mi negocio freelance gracias a Legato. Más proyectos sin
+          sacrificar calidad. Billing excelente."
+        </p>
+        <div class="space-y-2">
+          <div class="font-light text-primary text-base">Laura Torres</div>
+          <div class="text-xs text-muted/60 tracking-wider">
+            DevOps · Cartagena
+          </div>
+        </div>
+        <div class="w-12 h-px bg-blue-gray/20"></div>
+      </div>
+    </div>
+  </div>
+</section>

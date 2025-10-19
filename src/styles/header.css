@@ -1,0 +1,36 @@
+@import "./global.css";
+
+.nav-link {
+  @apply relative font-medium transition-colors hover:text-primary;
+  @apply flex flex-col items-center gap-2;
+  color: rgba(232, 232, 232, 0.8);
+}
+
+.nav-link:hover {
+  color: rgba(232, 232, 232, 1);
+}
+
+.nav-link:hover .nav-underline {
+  @apply w-full;
+}
+
+.mobile-nav-link {
+  @apply block font-medium transition-all hover:text-primary;
+  @apply space-y-2 hover:translate-x-2;
+  color: rgba(232, 232, 232, 0.85);
+}
+
+.mobile-nav-link:hover {
+  color: rgba(232, 232, 232, 1);
+}
+
+/* Header scroll effect */
+.header-scrolled {
+  @apply shadow-2xl;
+  background-color: rgba(15, 17, 21, 0.95);
+  box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.05);
+}
+
+.nav-underline {
+  @apply w-0 h-px bg-gold transition-all duration-300;
+}

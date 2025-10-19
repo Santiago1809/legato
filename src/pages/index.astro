@@ -1,11 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ModernHero from "../components/ModernHero.astro";
+import BenefitsSection from "../components/BenefitsSection.astro";
+import ModernProjectSection from "../components/ModernProjectSection.astro";
+import ModernStatisticsSection from "../components/ModernStatisticsSection.astro";
+import ModernBillingSection from "../components/ModernBillingSection.astro";
+import ModernTestimonials from "../components/ModernTestimonials.astro";
+import FAQ from "../components/FAQ.astro";
+import ModernContactSection from "../components/ModernContactSection.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Header />
+  <main>
+    <section id="home">
+      <ModernHero />
+    </section>
+    <section id="features">
+      <BenefitsSection />
+      <ModernProjectSection />
+      <ModernStatisticsSection />
+    </section>
+    <section id="pricing">
+      <ModernBillingSection />
+    </section>
+    <section id="testimonials">
+      <ModernTestimonials />
+    </section>
+    <section id="faq">
+      <FAQ />
+    </section>
+    <section id="contact">
+      <ModernContactSection />
+    </section>
+  </main>
+  <Footer />
 </Layout>

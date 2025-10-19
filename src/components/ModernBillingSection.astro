@@ -1,0 +1,541 @@
+---
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../lib/shadcn-imports";
+import { Badge } from "../lib/shadcn-imports";
+import { Button } from "../lib/shadcn-imports";
+import {
+  CreditCard,
+  Shield,
+  Settings,
+  CheckCircle,
+} from "../lib/shadcn-imports";
+---
+
+<section
+  class="py-32 px-8 md:px-16 bg-main text-primary relative overflow-hidden"
+>
+  <!-- Decorative vertical line -->
+  <div
+    class="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-jade/10 to-transparent"
+  >
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <!-- Section header -->
+    <div class="mb-32 text-center space-y-8">
+      <div class="flex items-center justify-center gap-4">
+        <div class="w-16 h-px bg-jade/40"></div>
+        <Badge
+          variant="secondary"
+          className="bg-jade/10 text-jade border-0 font-light tracking-[0.25em] uppercase px-5 py-1.5"
+        >
+          Suscripciones
+        </Badge>
+        <div class="w-16 h-px bg-jade/40"></div>
+      </div>
+      <h2
+        class="text-6xl md:text-7xl font-extralight text-primary jp-title tracking-wide"
+      >
+        Planes flexibles
+      </h2>
+      <div class="flex items-center justify-center gap-3">
+        <div class="jp-dot opacity-40"></div>
+        <div
+          class="w-40 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent"
+        >
+        </div>
+        <div class="jp-dot opacity-40"></div>
+      </div>
+      <p
+        class="text-lg font-light leading-loose max-w-2xl mx-auto"
+        style="color: rgba(232, 232, 232, 0.7);"
+      >
+        Escala tu negocio freelance con opciones adaptadas a tu crecimiento
+      </p>
+    </div>
+
+    <!-- Pricing cards with generous spacing -->
+    <div class="grid md:grid-cols-3 gap-8 mb-32 max-w-6xl mx-auto">
+      <!-- Personal -->
+      <div class="relative group">
+        <!-- Card -->
+        <div
+          class="jp-card p-12 space-y-10 h-full flex flex-col border border-gold/20 hover:border-gold/40 transition-all duration-500"
+        >
+          <!-- Header with decorative elements -->
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-1 h-8 bg-gold/60"></div>
+                <span
+                  class="text-xs font-light tracking-[0.3em] uppercase"
+                  style="color: rgba(232, 232, 232, 0.5);">Personal</span
+                >
+              </div>
+              <Badge
+                variant="outline"
+                className="border-gold/40 text-gold font-light text-xs px-3 py-1"
+              >
+                Gratis
+              </Badge>
+            </div>
+
+            <!-- Price -->
+            <div class="space-y-3 pl-4">
+              <div class="flex items-baseline gap-2">
+                <span class="text-7xl font-extralight text-gold tracking-tight"
+                  >$0</span
+                >
+              </div>
+              <p
+                class="text-sm font-light"
+                style="color: rgba(232, 232, 232, 0.6);"
+              >
+                Uso inicial personal
+              </p>
+            </div>
+
+            <!-- Decorative line -->
+            <div class="flex items-center gap-3 pl-4">
+              <div
+                class="w-20 h-px bg-gradient-to-r from-gold/60 to-transparent"
+              >
+              </div>
+              <div class="jp-dot opacity-40"></div>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <ul class="space-y-5 flex-1 pl-4">
+            <li class="flex items-start gap-4 group/item">
+              <div
+                class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+              >
+              </div>
+              <span
+                class="text-sm font-light leading-relaxed"
+                style="color: rgba(232, 232, 232, 0.75);"
+                >Hasta 5 proyectos</span
+              >
+            </li>
+            <li class="flex items-start gap-4 group/item">
+              <div
+                class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+              >
+              </div>
+              <span
+                class="text-sm font-light leading-relaxed"
+                style="color: rgba(232, 232, 232, 0.75);"
+                >Documentación básica</span
+              >
+            </li>
+            <li class="flex items-start gap-4 group/item">
+              <div
+                class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+              >
+              </div>
+              <span
+                class="text-sm font-light leading-relaxed"
+                style="color: rgba(232, 232, 232, 0.75);"
+                >Contratos simples</span
+              >
+            </li>
+          </ul>
+
+          <!-- CTA -->
+          <Button
+            className="w-full border-gold text-gold hover:bg-gold hover:text-black font-medium transition-all py-6 tracking-wider"
+            variant="outline"
+            client:load
+          >
+            Empezar
+          </Button>
+        </div>
+      </div>
+
+      <!-- Profesional - highlighted -->
+      <div class="relative group md:-mt-6 md:mb-6">
+        <!-- Popular badge -->
+        <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 z-10">
+          <Badge
+            className="bg-jade text-black font-medium tracking-wider px-6 py-1.5 shadow-lg"
+          >
+            Popular
+          </Badge>
+        </div>
+
+        <!-- Card with enhanced styling -->
+        <div
+          class="jp-card p-12 space-y-10 h-full flex flex-col border-2 border-jade/40 hover:border-jade/60 transition-all duration-500 shadow-xl shadow-jade/5"
+        >
+          <!-- Header with decorative elements -->
+          <div class="space-y-6 pt-2">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-1 h-8 bg-jade/80"></div>
+                <span
+                  class="text-xs font-light tracking-[0.3em] uppercase"
+                  style="color: rgba(232, 232, 232, 0.5);">Profesional</span
+                >
+              </div>
+            </div>
+
+            <!-- Price -->
+            <div class="space-y-3 pl-4">
+              <div class="flex items-baseline gap-2">
+                <span class="text-7xl font-extralight text-jade tracking-tight"
+                  >$29</span
+                >
+                <span
+                  class="text-base font-light"
+                  style="color: rgba(232, 232, 232, 0.4);">/mes</span
+                >
+              </div>
+              <p
+                class="text-sm font-light"
+                style="color: rgba(232, 232, 232, 0.6);"
+              >
+                Freelancers activos
+              </p>
+            </div>
+
+            <!-- Decorative line -->
+            <div class="flex items-center gap-3 pl-4">
+              <div
+                class="w-20 h-px bg-gradient-to-r from-jade/80 to-transparent"
+              >
+              </div>
+              <div class="jp-dot opacity-60 bg-jade"></div>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <ul class="space-y-5 flex-1 pl-4">
+            <li class="flex items-start gap-4 group/item">
+              <div
+                class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+              >
+              </div>
+              <span
+                class="text-sm font-light leading-relaxed"
+                style="color: rgba(232, 232, 232, 0.85);"
+                >Proyectos ilimitados</span
+              >
+            </li>
+            <li class="flex items-start gap-4 group/item">
+              <div
+                class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+              >
+              </div>
+              <span
+                class="text-sm font-light leading-relaxed"
+                style="color: rgba(232, 232, 232, 0.85);"
+                >IA avanzada completa</span
+              >
+            </li>
+            <li class="flex items-start gap-4 group/item">
+              <div
+                class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+              >
+              </div>
+              <span
+                class="text-sm font-light leading-relaxed"
+                style="color: rgba(232, 232, 232, 0.85);"
+                >Estadísticas en tiempo real</span
+              >
+            </li>
+            <li class="flex items-start gap-4 group/item">
+              <div
+                class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+              >
+              </div>
+              <span
+                class="text-sm font-light leading-relaxed"
+                style="color: rgba(232, 232, 232, 0.85);"
+                >Envío automático integrado</span
+              >
+            </li>
+          </ul>
+
+          <!-- CTA -->
+          <Button
+            className="w-full bg-jade hover:bg-jade/90 text-black font-medium py-6 tracking-wider shadow-lg shadow-jade/20"
+            client:load
+          >
+            Elegir plan
+          </Button>
+        </div>
+      </div>
+
+      <!-- Equipo -->
+      <div class="relative group">
+        <!-- Card -->
+        <div
+          class="jp-card p-12 space-y-10 h-full flex flex-col border border-blue-gray/20 hover:border-blue-gray/40 transition-all duration-500"
+        >
+          <!-- Header with decorative elements -->
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-1 h-8 bg-blue-gray/60"></div>
+                <span
+                  class="text-xs font-light tracking-[0.3em] uppercase"
+                  style="color: rgba(232, 232, 232, 0.5);">Equipo</span
+                >
+              </div>
+              <Badge
+                variant="outline"
+                className="border-blue-gray/40 text-blue-gray font-light text-xs px-3 py-1"
+              >
+                Empresas
+              </Badge>
+            </div>
+
+            <!-- Price -->
+            <div class="space-y-3 pl-4">
+              <div class="flex items-baseline gap-2">
+                <span
+                  class="text-7xl font-extralight text-blue-gray tracking-tight"
+                  >$99</span
+                >
+                <span
+                  class="text-base font-light"
+                  style="color: rgba(232, 232, 232, 0.4);">/mes</span
+                >
+              </div>
+              <p
+                class="text-sm font-light"
+                style="color: rgba(232, 232, 232, 0.6);"
+              >
+                Equipos pequeños
+              </p>
+            </div>
+
+            <!-- Decorative line -->
+            <div class="flex items-center gap-3 pl-4">
+              <div
+                class="w-20 h-px bg-gradient-to-r from-blue-gray/60 to-transparent"
+              >
+              </div>
+              <div class="jp-dot opacity-40 bg-blue-gray"></div>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <ul class="space-y-5 flex-1 pl-4">
+            <li class="flex items-start gap-4 group/item">
+              <div
+                class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+              >
+              </div>
+              <span
+                class="text-sm font-light leading-relaxed"
+                style="color: rgba(232, 232, 232, 0.75);"
+                >Todo Profesional incluido</span
+              >
+            </li>
+            <li class="flex items-start gap-4 group/item">
+              <div
+                class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+              >
+              </div>
+              <span
+                class="text-sm font-light leading-relaxed"
+                style="color: rgba(232, 232, 232, 0.75);">Hasta 5 usuarios</span
+              >
+            </li>
+            <li class="flex items-start gap-4 group/item">
+              <div
+                class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+              >
+              </div>
+              <span
+                class="text-sm font-light leading-relaxed"
+                style="color: rgba(232, 232, 232, 0.75);"
+                >Colaboración sincronizada</span
+              >
+            </li>
+            <li class="flex items-start gap-4 group/item">
+              <div
+                class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+              >
+              </div>
+              <span
+                class="text-sm font-light leading-relaxed"
+                style="color: rgba(232, 232, 232, 0.75);"
+                >Reportes empresariales</span
+              >
+            </li>
+          </ul>
+
+          <!-- CTA -->
+          <Button
+            className="w-full border-blue-gray text-blue-gray hover:bg-blue-gray hover:text-black font-medium transition-all py-6 tracking-wider"
+            variant="outline"
+            client:load
+          >
+            Contactar
+          </Button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features section with minimalist approach -->
+    <div class="grid md:grid-cols-2 gap-20 max-w-5xl mx-auto">
+      <div class="space-y-8 group">
+        <div class="flex items-start gap-5">
+          <div class="relative">
+            <Settings
+              className="w-10 h-10 text-gold opacity-70 group-hover:opacity-100 transition-opacity mt-1"
+              client:load
+            />
+            <div
+              class="absolute -bottom-2 -right-2 w-3 h-3 border border-gold/30 rounded-full"
+            >
+            </div>
+          </div>
+          <div class="flex-1 space-y-5">
+            <div class="space-y-3">
+              <h3 class="text-2xl font-light text-primary tracking-wide">
+                Gestión flexible
+              </h3>
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-20 h-px bg-gradient-to-r from-gold/60 to-transparent"
+                >
+                </div>
+                <div class="w-1 h-1 rounded-full bg-gold/40"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4 pl-2">
+          <div class="flex items-start gap-4 group/item">
+            <div
+              class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+            >
+            </div>
+            <span
+              class="text-sm font-light leading-relaxed"
+              style="color: rgba(232, 232, 232, 0.75);"
+              >Cambio de plan sin restricciones</span
+            >
+          </div>
+          <div class="flex items-start gap-4 group/item">
+            <div
+              class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+            >
+            </div>
+            <span
+              class="text-sm font-light leading-relaxed"
+              style="color: rgba(232, 232, 232, 0.75);"
+              >Facturación mensual o anual</span
+            >
+          </div>
+          <div class="flex items-start gap-4 group/item">
+            <div
+              class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+            >
+            </div>
+            <span
+              class="text-sm font-light leading-relaxed"
+              style="color: rgba(232, 232, 232, 0.75);"
+              >Historial completo de transacciones</span
+            >
+          </div>
+          <div class="flex items-start gap-4 group/item">
+            <div
+              class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+            >
+            </div>
+            <span
+              class="text-sm font-light leading-relaxed"
+              style="color: rgba(232, 232, 232, 0.75);"
+              >Cancelación inmediata sin penalización</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-8 group">
+        <div class="flex items-start gap-5">
+          <div class="relative">
+            <Shield
+              className="w-10 h-10 text-jade opacity-70 group-hover:opacity-100 transition-opacity mt-1"
+              client:load
+            />
+            <div
+              class="absolute -bottom-2 -right-2 w-3 h-3 border border-jade/30 rounded-full"
+            >
+            </div>
+          </div>
+          <div class="flex-1 space-y-5">
+            <div class="space-y-3">
+              <h3 class="text-2xl font-light text-primary tracking-wide">
+                Pagos seguros
+              </h3>
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-20 h-px bg-gradient-to-r from-jade/60 to-transparent"
+                >
+                </div>
+                <div class="w-1 h-1 rounded-full bg-jade/40"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4 pl-2">
+          <div class="flex items-start gap-4 group/item">
+            <div
+              class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+            >
+            </div>
+            <span
+              class="text-sm font-light leading-relaxed"
+              style="color: rgba(232, 232, 232, 0.75);"
+              >Integración Stripe y PayPal certificada</span
+            >
+          </div>
+          <div class="flex items-start gap-4 group/item">
+            <div
+              class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+            >
+            </div>
+            <span
+              class="text-sm font-light leading-relaxed"
+              style="color: rgba(232, 232, 232, 0.75);"
+              >Encriptación SSL 256-bit</span
+            >
+          </div>
+          <div class="flex items-start gap-4 group/item">
+            <div
+              class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+            >
+            </div>
+            <span
+              class="text-sm font-light leading-relaxed"
+              style="color: rgba(232, 232, 232, 0.75);"
+              >Cumplimiento PCI DSS nivel 1</span
+            >
+          </div>
+          <div class="flex items-start gap-4 group/item">
+            <div
+              class="w-1.5 h-1.5 rounded-full bg-jade mt-2 group-hover/item:scale-125 transition-transform"
+            >
+            </div>
+            <span
+              class="text-sm font-light leading-relaxed"
+              style="color: rgba(232, 232, 232, 0.75);"
+              >Soporte especializado 24/7</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
