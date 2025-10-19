@@ -3,6 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Shikamaru";
+  src: url("../fonts/Shikamaru-WyK5O.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -44,14 +51,13 @@
 
 :root {
   --radius: 0.625rem;
-  --gold-soft: #debc4e;
+  --gold-soft: #B7282E;
   /* Design palette from user */
   --bg-main: #0f1115;
   --text-primary: #e8e8e8;
   --primary-lines: #d4af37;
   --accent: #0e9488;
   --primary-black: #1a1a1a;
-  --gold-soft: #d4af37;
   --jade: #0e9488;
   --blue-gray: #2f4e60;
   --text-muted: #6b6b6b;
