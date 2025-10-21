@@ -19,7 +19,7 @@ import { Mail, MessageSquare, Download } from "../lib/shadcn-imports";
 
   <div class="max-w-6xl mx-auto relative z-10">
     <!-- Header -->
-    <div class="mb-24 text-center space-y-6">
+    <div class="mb-24 text-center space-y-6 lazy-appear fade-up">
       <div class="flex items-center justify-center gap-4">
         <div class="jp-dot"></div>
         <Badge
@@ -44,7 +44,7 @@ import { Mail, MessageSquare, Download } from "../lib/shadcn-imports";
     </div>
 
     <!-- CTA Buttons -->
-    <div class="flex flex-wrap gap-6 justify-center mb-20">
+    <div class="flex flex-wrap gap-6 justify-center mb-20 lazy-appear scale-up delay-100">
       <Button
         size="lg"
         className="bg-jade hover:bg-jade/90 text-black font-medium px-10 py-6"
@@ -75,7 +75,7 @@ import { Mail, MessageSquare, Download } from "../lib/shadcn-imports";
 
     <!-- Contact grid -->
     <div class="grid md:grid-cols-3 gap-12 mb-24 max-w-4xl mx-auto">
-      <div class="text-center space-y-4 group">
+      <div class="text-center space-y-4 group lazy-appear fade-up delay-200">
         <Mail
           className="w-8 h-8 text-jade opacity-70 mx-auto group-hover:opacity-100 transition-opacity"
           client:load
@@ -87,7 +87,7 @@ import { Mail, MessageSquare, Download } from "../lib/shadcn-imports";
         </div>
       </div>
 
-      <div class="text-center space-y-4 group">
+      <div class="text-center space-y-4 group lazy-appear fade-up delay-300">
         <MessageSquare
           className="w-8 h-8 text-gold opacity-70 mx-auto group-hover:opacity-100 transition-opacity"
           client:load
@@ -101,7 +101,7 @@ import { Mail, MessageSquare, Download } from "../lib/shadcn-imports";
         </div>
       </div>
 
-      <div class="text-center space-y-4 group">
+      <div class="text-center space-y-4 group lazy-appear fade-up delay-200">
         <Download
           className="w-8 h-8 text-blue-gray opacity-70 mx-auto group-hover:opacity-100 transition-opacity"
           client:load
@@ -115,7 +115,7 @@ import { Mail, MessageSquare, Download } from "../lib/shadcn-imports";
     </div>
 
     <!-- Early access form -->
-    <div class="jp-card p-12 max-w-3xl mx-auto">
+    <div class="jp-card p-12 max-w-3xl mx-auto lazy-appear scale-up delay-500">
       <div class="text-center space-y-8">
         <div class="space-y-4">
           <h3 class="text-3xl font-light text-primary jp-subtitle">
