@@ -13,6 +13,11 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
+  <!-- Importar estilos de lazy loading -->
+  <style>
+    @import "../styles/lazyAppear.css";
+  </style>
+  
   <Header />
   <main>
     <section id="home">
@@ -20,7 +25,11 @@ import Footer from "../components/Footer.astro";
     </section>
     <section id="features">
       <BenefitsSection />
+    </section>
+    <section>
       <ModernProjectSection />
+    </section>
+    <section>
       <ModernStatisticsSection />
     </section>
     <section id="pricing">
@@ -38,3 +47,16 @@ import Footer from "../components/Footer.astro";
   </main>
   <Footer />
 </Layout>
+
+<!-- Script de lazy loading -->
+<script>
+  import lazyAppear from '../scripts/lazyAppear.js';
+  
+  // Inicializar con configuración personalizada
+  document.addEventListener('DOMContentLoaded', () => {
+    lazyAppear.init({
+      threshold: 0.15,
+      rootMargin: '0px 0px -100px 0px'
+    });
+  });
+</script>

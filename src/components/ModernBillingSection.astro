@@ -27,7 +27,7 @@ import {
 
   <div class="max-w-7xl mx-auto relative z-10">
     <!-- Section header -->
-    <div class="mb-32 text-center space-y-8">
+    <div class="mb-32 text-center space-y-8 lazy-appear fade-up">
       <div class="flex items-center justify-center gap-4">
         <div class="w-16 h-px bg-jade/40"></div>
         <Badge
@@ -62,7 +62,7 @@ import {
     <!-- Pricing cards with generous spacing -->
     <div class="grid md:grid-cols-3 gap-8 mb-32 max-w-6xl mx-auto">
       <!-- Personal -->
-      <div class="relative group">
+      <div class="relative group lazy-appear scale-up">
         <!-- Card -->
         <div
           class="jp-card p-12 space-y-10 h-full flex flex-col border border-gold/20 hover:border-gold/40 transition-all duration-500"
@@ -120,7 +120,7 @@ import {
               <span
                 class="text-sm font-light leading-relaxed"
                 style="color: rgba(232, 232, 232, 0.75);"
-                >Hasta 5 proyectos</span
+                >Hasta 3 proyectos</span
               >
             </li>
             <li class="flex items-start gap-4 group/item">
@@ -159,7 +159,7 @@ import {
       </div>
 
       <!-- Profesional - highlighted -->
-      <div class="relative group md:-mt-6 md:mb-6">
+      <div class="relative group md:-mt-6 md:mb-6 lazy-appear scale-up delay-100">
         <!-- Popular badge -->
         <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 z-10">
           <Badge
@@ -273,7 +273,7 @@ import {
       </div>
 
       <!-- Equipo -->
-      <div class="relative group">
+      <div class="relative group lazy-appear scale-up delay-200">
         <!-- Card -->
         <div
           class="jp-card p-12 space-y-10 h-full flex flex-col border border-blue-gray/20 hover:border-blue-gray/40 transition-all duration-500"
@@ -386,8 +386,8 @@ import {
     </div>
 
     <!-- Features section with minimalist approach -->
-    <div class="grid md:grid-cols-2 gap-20 max-w-5xl mx-auto">
-      <div class="space-y-8 group">
+    <!-- <div class="grid md:grid-cols-2 gap-20 max-w-5xl mx-auto">
+      <div class="space-y-8 group lazy-appear fade-left delay-300">
         <div class="flex items-start gap-5">
           <div class="relative">
             <Settings
@@ -462,7 +462,7 @@ import {
         </div>
       </div>
 
-      <div class="space-y-8 group">
+      <div class="space-y-8 group lazy-appear fade-right delay-500">
         <div class="flex items-start gap-5">
           <div class="relative">
             <Shield
@@ -536,6 +536,6 @@ import {
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
