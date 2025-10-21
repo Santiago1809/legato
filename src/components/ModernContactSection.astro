@@ -47,13 +47,13 @@ import { Mail, MessageSquare, Download } from "../lib/shadcn-imports";
     <div class="flex flex-wrap gap-6 justify-center mb-20 lazy-appear scale-up delay-100">
       <Button
         size="lg"
-        className="bg-jade hover:bg-jade/90 text-black font-medium px-10 py-6"
+        className="bg-jade hover:bg-jade/90 text-black font-medium px-10 py-6 transition-all duration-300 ease-in-out shadow-md hover:shadow-xl hover:scale-105 focus-visible:ring-2 focus-visible:ring-jade/70 focus-visible:ring-offset-2 outline-none"
         client:load
       >
         <Mail className="w-5 h-5 mr-3" />
         Email
       </Button>
-      <Button
+      <!-- <Button
         size="lg"
         variant="outline"
         className="border-gold text-gold hover:bg-gold hover:text-black font-medium px-10 py-6 transition-all"
@@ -70,7 +70,7 @@ import { Mail, MessageSquare, Download } from "../lib/shadcn-imports";
       >
         <Download className="w-5 h-5 mr-3" />
         Brochure
-      </Button>
+      </Button> -->
     </div>
 
     <!-- Contact grid -->
